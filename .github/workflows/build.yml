@@ -34,21 +34,21 @@ jobs:
 #         name: stairspeedtest_reborn_linux64
 #         path: stairspeedtest/
 
-  macos_build:
-    name: macOS Build
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: |
-        bash scripts/build.macos.release.sh
-        bash scripts/build.macos.clients.sh
-        mv base stairspeedtest
-    - name: Upload
-      uses: actions/upload-artifact@v2
-      with:
-        name: stairspeedtest_reborn_darwin64
-        path: stairspeedtest/
+#   macos_build:
+#     name: macOS Build
+#     runs-on: macos-latest
+#     steps:
+#     - uses: actions/checkout@v2
+#     - name: Build
+#       run: |
+#         bash scripts/build.macos.release.sh
+#         bash scripts/build.macos.clients.sh
+#         mv base stairspeedtest
+#     - name: Upload
+#       uses: actions/upload-artifact@v2
+#       with:
+#         name: stairspeedtest_reborn_darwin64
+#         path: stairspeedtest/
         
   windows64_build:
     name: Windows x86_64 Build
